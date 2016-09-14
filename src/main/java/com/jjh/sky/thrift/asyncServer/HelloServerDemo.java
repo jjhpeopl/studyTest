@@ -1,7 +1,7 @@
 package com.jjh.sky.thrift.asyncServer;
 
-import com.jjh.thrift.demo.HelloWorldService;
-import com.jjh.thrift.demo.impl.HelloWorldImpl;
+import com.jjh.sky.thrift.demo.HelloWorldService;
+import com.jjh.sky.thrift.demo.impl.HelloWorldImpl;
 import org.apache.thrift.TProcessor;
 import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.server.TNonblockingServer;
