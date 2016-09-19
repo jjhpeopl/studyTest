@@ -84,6 +84,9 @@
         <includes>
           <include>context.xml</include>
         </includes>
+        <excludes>
+          <exclude>context.xml</exclude>
+        </excludes>
       </resource>
       <resource>
         <directory>src/main/resources</directory>
