@@ -74,6 +74,13 @@
       <artifactId>dozer</artifactId>
       <version>5.4.0</version>
     </dependency>
+
+    <!-- archaius -->
+    <dependency>
+      <groupId>com.netflix.archaius</groupId>
+      <artifactId>archaius-core</artifactId>
+      <version>0.6.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -84,9 +91,6 @@
         <includes>
           <include>context.xml</include>
         </includes>
-        <excludes>
-          <exclude>context.xml</exclude>
-        </excludes>
       </resource>
       <resource>
         <directory>src/main/resources</directory>
