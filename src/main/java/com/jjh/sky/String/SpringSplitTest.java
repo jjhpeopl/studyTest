@@ -14,7 +14,7 @@ public class SpringSplitTest {
 
     public static void main (String[] args) {
         String test1 = "1,2,3,";
-        System.out.println(test1.split(",", 4).length);
+        System.out.println(test1.split(",", 5).length);
         System.out.println(StringUtils.split(test1, ",").length);
         System.out.println(StringUtils.splitPreserveAllTokens(test1, ",").length);
 
