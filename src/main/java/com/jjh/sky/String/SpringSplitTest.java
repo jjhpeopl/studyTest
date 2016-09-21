@@ -18,7 +18,7 @@ public class SpringSplitTest {
         System.out.println(StringUtils.split(test1, ",").length);
         System.out.println(StringUtils.splitPreserveAllTokens(test1, ",").length);
 
-        System.out.println(Splitter.onPattern("14").omitEmptyStrings().split(test1).toString());
+        System.out.println(Splitter.onPattern("13").omitEmptyStrings().split(test1).toString());
 
         // 把字符串解析成map
         String str = "a=1;b=2";
