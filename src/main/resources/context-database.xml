@@ -13,9 +13,9 @@
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test?autoReconnect=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull" />
         <property name="user" value="root" />
         <property name="password" value="123456" />
-        <property name="initialPoolSize" value="8" />
-        <property name="minPoolSize" value="8" />
-        <property name="maxPoolSize" value="30" />
+        <property name="initialPoolSize" value="0" />
+        <property name="minPoolSize" value="0" />
+        <property name="maxPoolSize" value="2" />
         <property name="maxIdleTime" value="3000" />
         <!--<property name="maxStatements" value="1000" />-->
         <property name="acquireIncrement" value="2" />
