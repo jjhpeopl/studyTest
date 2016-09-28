@@ -15,13 +15,12 @@
         <property name="password" value="123456" />
         <property name="initialPoolSize" value="0" />
         <property name="minPoolSize" value="0" />
-        <property name="maxPoolSize" value="2" />
+        <property name="maxPoolSize" value="1" />
         <property name="maxIdleTime" value="3000" />
-        <!--<property name="maxStatements" value="1000" />-->
-        <property name="acquireIncrement" value="2" />
+        <property name="acquireIncrement" value="1" />
         <property name="idleConnectionTestPeriod" value="60" />
         <property name="preferredTestQuery" value="select 1" />
-        <property name="checkoutTimeout" value="3000" />
+        <property name="checkoutTimeout" value="50" />
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

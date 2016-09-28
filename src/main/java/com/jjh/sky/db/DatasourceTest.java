@@ -3,11 +3,14 @@ package com.jjh.sky.db;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.omg.IOP.ExceptionDetailMessage;
 import org.omg.SendingContext.RunTime;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.*;
 
 /**
@@ -19,13 +22,16 @@ public class DatasourceTest {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:context-database.xml");
 
         BlockingQueue<Runnable> queue = new LinkedBlockingQueue<Runnable>(100000);
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(30, 30, 0, TimeUnit.SECONDS, queue);
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(500, 500, 0, TimeUnit.SECONDS, queue);
 
-        for (int i = 0; i < 10; i ++) {
+        List<Future> result = new ArrayList<Future>();
+
+        for (int i = 0; i < 1000; i ++) {
             Task task1 = new Task(ctx);
             Thread t = new Thread(task1);
             threadPoolExecutor.submit(t);
         }
+
 
     }
 
@@ -38,17 +44,21 @@ public class DatasourceTest {
         }
 
         public void run() {
-            SqlSessionTemplate template = (SqlSessionTemplate) ctx.getBean("sqlSessionTemplate");
-            System.out.println(template.selectOne("selectData"));
-            ComboPooledDataSource dataSource = (ComboPooledDataSource) ctx.getBean("datasource");
             try {
-                Connection connection = dataSource.getConnection();
-//                Thread.sleep(500);
-//                connection.close();
-                System.out.println(dataSource.getNumConnections());
+                SqlSessionTemplate template = (SqlSessionTemplate) ctx.getBean("sqlSessionTemplate");
+                System.out.println(template.selectOne("selectData"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
+//            ComboPooledDataSource dataSource = (ComboPooledDataSource) ctx.getBean("datasource");
+//            try {
+//                Connection connection = dataSource.getConnection();
+//                Thread.sleep(500);
+//                connection.close();
+//                System.out.println(dataSource.getNumConnections());
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
 
 //            try {
 //                Thread.sleep(10000);
