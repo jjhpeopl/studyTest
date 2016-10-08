@@ -20,7 +20,7 @@
         <property name="acquireIncrement" value="1" />
         <property name="idleConnectionTestPeriod" value="60" />
         <property name="preferredTestQuery" value="select 1" />
-        <property name="checkoutTimeout" value="50" />
+        <property name="checkoutTimeout" value="3000" />
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

@@ -26,7 +26,7 @@ public class DatasourceTest {
 
         List<Future> result = new ArrayList<Future>();
 
-        for (int i = 0; i < 1000; i ++) {
+        for (int i = 0; i < 10; i ++) {
             Task task1 = new Task(ctx);
             Thread t = new Thread(task1);
             threadPoolExecutor.submit(t);
