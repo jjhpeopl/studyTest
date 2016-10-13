@@ -29,6 +29,10 @@ public class SpringSplitTest {
         String resultStr = Joiner.on(";").withKeyValueSeparator("=").join(resultMap);
         System.out.println(resultStr);
 
+        String mailAddress = "jia44jia@qq.comd";
+        String regex = "^[A-Za-z0-9]+((-[A-Za-z0-9]+)|(\\.[A-Za-z0-9]+))*@([A-Za-z0-9])+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z]{2,5}$";
+        System.out.println(mailAddress.matches(regex));
+
     }
 
 }
