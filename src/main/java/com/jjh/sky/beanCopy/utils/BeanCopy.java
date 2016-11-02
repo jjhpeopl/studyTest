@@ -18,6 +18,12 @@ public class BeanCopy {
         BeanUtils.copyProperties(user, userVo);
         System.out.println(userVo.getId());
         System.out.println(userVo.getName());
+
+        Users users = new Users();
+        users.setUser(user);
+        System.out.println(users.getUser().getName());
+        user.setName("jjh1");
+        System.out.println(users.getUser().getName());
     }
 
 }

@@ -9,7 +9,7 @@ public class DateUtils {
 
     public static void main(String[] args) {
         // 先生成指定时间
-        DateTime dateTime = new DateTime(2016, 9, 7, 0, 0, 0);
+        DateTime dateTime = new DateTime(2016, 10, 16, 0, 0, 0);
         System.out.println(dateTime.getMillis() / 1000);
     }
 
