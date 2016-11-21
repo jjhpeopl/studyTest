@@ -22,7 +22,7 @@ public class DozerCopy {
         System.out.println(userVo.getName());
 
         UserVo userVo1 = new UserVo();
-        userVo1.setId(2L);
+        userVo1.setId(2);
         userVo1.setName("xiaosong");
 
         User user1 = mapper.map(userVo1, User.class);

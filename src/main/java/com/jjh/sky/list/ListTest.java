@@ -19,6 +19,8 @@ public class ListTest {
         stringList.add("7");
         stringList.add("8");
 
+        System.out.println(stringList.subList(0, 3).size());
+
         int limit = 3;
         for (int index = 0; index < stringList.size();) {
             List<String> partList = stringList.subList(index,
