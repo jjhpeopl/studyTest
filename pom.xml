@@ -171,6 +171,13 @@
             </exclusions>
         </dependency>
 
+        <!-- mss美团云存储 -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>mss-java-sdk-s3</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>
