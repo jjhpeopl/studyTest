@@ -25,8 +25,8 @@ public class AmazonS3ClientProvider {
      *        secretKey:mss用户的access secret
      *        url:mss server hostname,一般为mtmss.com
      */
-    private static String accessKey = "8cf1216eab4c4e0e9481329db5d7da4a";
-    private static String secretKey = "a52e460e9d5349388b91a14b2230a3a8";
+    private static String accessKey = "";
+    private static String secretKey = "";
     private static String url = "http://mtmos.com";
     static AmazonS3Client s3conn;
 
