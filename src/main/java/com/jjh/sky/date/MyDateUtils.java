@@ -74,4 +74,16 @@ public class MyDateUtils {
         else return false;
     }
 
+    public static void main(String[] args) {
+        // 得到今天的时间
+        long todayTime = System.currentTimeMillis();
+        // 得到2016-11-24的时间
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(2016, 10, 24);
+        System.out.println(calendar.getTimeInMillis());
+        long endTime = calendar.getTimeInMillis();
+
+        System.out.println(getDaysBetween(todayTime, endTime));
+    }
+
 }
