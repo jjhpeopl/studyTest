@@ -78,7 +78,7 @@ public class JodaTimeTest {
         DateTime.Property month = dt6.monthOfYear();
         System.out.println(month.isLeap());
 
-        System.out.println(DateTime.now().plusDays(-181).toString("yyyy-MM-dd HH:mm:ss"));
+        System.out.println((new DateTime(1494574493000L)).toString("yyyyMMdd"));
 
     }
 
